@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    font-family: Arial, sans-serif; 
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px; /* Espace sous le titre */
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Changement de couleur au survol */
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3498db;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+}
+#magnet.cursor {
+    width: 20px; /* Réduisez la taille de la boule du curseur */
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none; /* Évitez que l'aimant interfère avec les particules */
+    transform: translate(-50%, -50%); /* Déplacez l'aimant pour le centrer sur la souris */
+    transition: width 0.3s, height 0.3s; /* Ajoutez une transition pour l'animation de réduction de taille */
+}
